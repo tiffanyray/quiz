@@ -1,3 +1,6 @@
+//importing modal js file
+import modal from './modal.js';
+
 $(document).ready(function() {
     
 console.log('I\'m working!');
@@ -78,6 +81,11 @@ form.addEventListener('submit', (e) => {
     console.log(message);
     console.log(score);
 
+    modal.open({content: message });
+
 });
+
+
+
 
 }); //End of document ready function
