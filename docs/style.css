@@ -39,7 +39,7 @@ header p {
 
 #modal {
   position: absolute;
-  background: rgba(0, 0, 0, 0.2);
+  background: #626262;
   border-radius: 5px;
   padding: 2px;
 }
@@ -48,6 +48,7 @@ header p {
   border-radius: 5px;
   padding: 20px;
   text-align: center;
+  color: lightgrey;
 }
 
 #close {
@@ -58,7 +59,7 @@ header p {
 }
 
 a {
-  color: inherit;
+  color: lightgrey;
   text-decoration: none;
 }
 
