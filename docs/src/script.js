@@ -2,8 +2,6 @@
 import modal from './modal.js';
 
 $(document).ready(function() {
-    
-console.log('I\'m working!');
 
 var form = document.getElementById('quizForm');
 
@@ -77,9 +75,6 @@ form.addEventListener('submit', (e) => {
     } else {
         message = 'Seek professional help...';
     }
-
-    console.log(message);
-    console.log(score);
 
     modal.open({content: message });
 

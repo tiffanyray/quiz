@@ -1,5 +1,3 @@
-console.log('Im from modal!');
-
 export default (() => {
     let method = {};
     const $overlay = $('#overlay'),
