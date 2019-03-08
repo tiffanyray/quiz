@@ -8,7 +8,6 @@ var form = document.getElementById('quizForm');
 //Event handler to listen for submit button
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    let score = 0;
 
     const questionOneVal = $('input[name=q1]:checked', form).val();
     const questionTwoVal = $('input[name=q2]:checked', form).val();
@@ -21,48 +20,39 @@ form.addEventListener('submit', (e) => {
     // console.log(questionFourVal);
     // console.log(questionFiveVal);
 
+    let message = '';
 
-    //question one adding to score
-    if (questionOneVal === 'a' || questionOneVal === 'b') {
-        score += 1;
-    }
-
-    //question two adding to score
+    //question two 
     if (questionTwoVal === 'b') {
-        score += 1;
+        message += 'Make sure you have a good tent and sleeping bag. '
     }
 
-    //question three adding to score
+    //question three
     if (questionThreeVal === 'a') {
-        score += 1;
+        message += 'You need more than a day before it\'s considered camping. '
+    } else if (questionThreeVal === 'd') {
+        message += 'I wish I could camp forever too! '
     }
 
-    //question four adding to score 
-    if (questionFourVal === 'a') {
-        score += 1;
+    //question five 
+    if (questionFiveVal === 'a') {
+        message = 'Don\'t go. That sounds to dangerous...'
+    } else if (questionFiveVal === 'd') {
+        message += 'Bring plenty of water! '
+    } 
+
+    if (message === '') {
+        message = 'Go and have fun!'
     }
 
-    //question five adding to score
-    if (questionFiveVal === 'a' || questionFiveVal === 'b') {
-        score += 1;
+    //If they don't know anything.. At bottom to make message appear without other comments.
+    if (questionOneVal === 'a' || questionFourVal === 'a' || questionFourVal === 'b') {
+        message = 'Do some more research about camping. '
     }
-
-    let message;
-
-    if (score === 5) {
-        message = 'Congrats, You are living life to the fullest!';
-    } else if (score === 4) {
-        message = 'Your doing good! Keep on working hard.';
-    } else if (score === 3) {
-        message = 'Do some inner reflection, it could help you.';
-    } else if (score === 2) {
-        message = 'Have you ever heard of personal development?';
-    } else {
-        message = 'Seek professional help...';
-    }
+    
 
     modal.open({content: message });
-
+    form.reset();
 });
 
 
