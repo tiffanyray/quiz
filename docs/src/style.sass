@@ -18,6 +18,7 @@ body
 header
     text-align: center
     border-bottom: 2px solid $dark-purple
+    margin-bottom: 2rem
 
 header h1
     font-size: 3rem
@@ -25,12 +26,12 @@ header h1
 
     
 fieldset 
-    padding: 1rem
-    margin: .5rem
     border-color: $dark-purple
+    margin-bottom: 1rem
 
 legend
-    padding: 1rem
+    margin-top: 1rem
+    padding: 0 1rem
 
 
 //Modal Styling
@@ -85,3 +86,7 @@ a
     width: auto
     font-size: .85rem
     outline: none
+
+@media only screen and (max-width: 500px) 
+    header h1
+        font-size: 2rem

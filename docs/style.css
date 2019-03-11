@@ -14,6 +14,7 @@ body {
 header {
   text-align: center;
   border-bottom: 2px solid #493743;
+  margin-bottom: 2rem;
 }
 
 header h1 {
@@ -22,13 +23,13 @@ header h1 {
 }
 
 fieldset {
-  padding: 1rem;
-  margin: 0.5rem;
   border-color: #493743;
+  margin-bottom: 1rem;
 }
 
 legend {
-  padding: 1rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
 }
 
 #overlay {
@@ -84,6 +85,12 @@ a {
   width: auto;
   font-size: 0.85rem;
   outline: none;
+}
+
+@media only screen and (max-width: 500px) {
+  header h1 {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

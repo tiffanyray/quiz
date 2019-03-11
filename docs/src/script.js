@@ -39,14 +39,12 @@ form.addEventListener('submit', (e) => {
         message = 'Don\'t go. That sounds to dangerous...'
     } else if (questionFiveVal === 'd') {
         message += 'Bring plenty of water! '
-    } 
-
-    if (message === '') {
-        message = 'Go and have fun!'
-    }
+    } else (
+        message += 'Go and have fun!'
+    ) 
 
     //If they don't know anything.. At bottom to make message appear without other comments.
-    if (questionOneVal === 'a' || questionFourVal === 'a' || questionFourVal === 'b') {
+    if (questionOneVal === 'a' || questionFourVal === 'a') {
         message = 'Do some more research about camping. '
     }
     
